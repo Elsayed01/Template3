@@ -104,6 +104,8 @@ ul {
 
 .header {
   box-shadow: 0 0 10px #ddd;
+  background-color: white;
+  position: relative;
 }
 
 .header .container {
@@ -305,3 +307,180 @@ ul {
 /* End Mega-Menu */
 
 /* End Header */
+
+/* Start Landing */
+
+.landing {
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.landing .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  padding-bottom: var(--main-section-padding);
+}
+
+
+@media (max-width: 991px) {
+
+  .landing .container .text-box {
+
+    text-align: center;
+  }
+}
+
+.landing .container .text-box h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 991px) {
+
+  .landing .container .text-box h1 {
+
+    font-size: 2rem;
+  }
+}
+
+.landing .container .text-box p {
+  color: #666;
+  line-height: var(--text-line-height);
+  max-width: 500px;
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 991px) {
+
+  .landing .container .text-box p {
+
+    font-size: 1rem;
+  }
+}
+
+.landing .container .image {
+  position: relative;
+  -webkit-animation: up-and-down 5s linear infinite;
+  animation: up-and-down 5s linear infinite;
+}
+
+@media (max-width: 991px) {
+
+  .landing .container .image {
+
+    display: none;
+  }
+}
+
+.landing .container .image img {
+
+  width: 500px;
+  max-width: 100%;
+}
+
+.landing>.arrow-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--main-color);
+
+}
+
+@media (max-width: 991px) {
+
+  .landing>.arrow-down {
+
+    font-size: 0.7rem;
+  }
+}
+
+.landing>.arrow-down:hover {
+
+  color: var(--alt-color);
+}
+
+.landing>.arrow-down i {
+  -webkit-animation: bouncing 1.5s infinite;
+  animation: bouncing 1.5s infinite;
+
+}
+
+
+/* End Landing */
+
+
+
+/* Start Animation */
+
+@-webkit-keyframes up-and-down {
+
+  0%, 100% {
+
+    top: 0;
+  }
+
+  50% {
+
+    top: -50px;
+  }
+}
+
+@keyframes up-and-down {
+
+  0%, 100% {
+
+    top: 0;
+  }
+
+  50% {
+
+    top: -50px;
+  }
+}
+
+@-webkit-keyframes bouncing {
+
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+
+  }
+
+  40%, 60% {
+    transform: translateY(-15px);
+
+  }
+}
+
+@keyframes bouncing {
+
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40%, 60% {
+    transform: translateY(-15px);
+
+  }
+
+}
+
+/* End Animation */
