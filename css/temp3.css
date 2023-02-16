@@ -1,0 +1,101 @@
+/* Start Global Rules */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #2196F3;
+  --alt-color: #1787e0;
+  --text-color: #777;
+  --text-line-height: 1.7;
+  --section-background: #ececec;
+  --main-section-padding: 100px;
+  --transition-time: 0.3s;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: 'Cairo', sans-serif;
+
+  overflow: overlay;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+::-webkit-scrollbar {
+
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+a {
+
+  text-decoration: none;
+}
+
+ul {
+
+  list-style: none;
+}
+
+
+/* End Global Rules */
+
+/* Start Components */
+
+
+/* End Components */
+
+
+/* Start Container */
+
+.container {
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+
+  .container {
+
+    width: 750px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+
+  .container {
+
+    width: 970px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+
+  .container {
+
+    width: 1170px;
+  }
+}
+
+/* End Container */
