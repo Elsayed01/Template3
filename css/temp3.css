@@ -66,12 +66,15 @@ ul {
   padding: 10px 20px;
   margin: 0 auto 80px;
   position: relative;
+  z-index: 1;
+  transition: var(--transition-time);
 }
 
 .main-title:hover {
-  border: 2px solid white;
+  border: 2px solid transparent;
   color: white;
   transition-delay: var(--transition-time);
+  z-index: 1;
 }
 
 .main-title::before,
@@ -80,11 +83,10 @@ ul {
   background-color: var(--main-color);
   width: 12px;
   height: 12px;
-  z-index: -1;
   border-radius: 50%;
   top: 50%;
+  z-index: -1;
   transform: translateY(-50%);
-  transition: var(--transition-time);
 }
 
 .main-title::before {
@@ -542,6 +544,62 @@ ul {
 
 /* End Articles */
 
+/* Start Gallery */
+
+.gallery {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  background-color: var(--section-background);
+}
+
+.gallery .container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.gallery .container .box {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.gallery .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .container .box .image::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255 255 255 / 20%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.gallery .container .box .image:hover::before {
+  -webkit-animation: flashing 0.7s;
+  animation: flashing 0.7s;
+}
+
+.gallery .container .box .image img {
+  max-width: 100%;
+  transition: var(--transition-time);
+}
+
+.gallery .container .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* End Gallery */
+
 
 /* Start Animation */
 
@@ -675,6 +733,36 @@ ul {
   100% {
     transform: translateX(10px);
 
+  }
+}
+
+@-webkit-keyframes flashing {
+
+  0%, 40% {
+
+    opacity: 1;
+  }
+
+  100% {
+
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+@keyframes flashing {
+
+  0%, 40% {
+
+    opacity: 1;
+  }
+
+  100% {
+
+    opacity: 0;
+    width: 200%;
+    height: 200%;
   }
 }
 
