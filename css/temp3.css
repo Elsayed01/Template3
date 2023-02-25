@@ -835,6 +835,149 @@ ul {
 
 /* End Testimonials */
 
+/* Start Team Members */
+
+.team-members {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.team-members .container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.team-members .container .box {
+  position: relative;
+  border-radius: 10px;
+  padding-top: 60px;
+}
+
+@media (max-width:767px) {
+
+  .team-members .container .box {
+
+    padding-left: 15px;
+  }
+}
+
+.team-members .container .box::before,
+.team-members .container .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.team-members .container .box::before {
+  z-index: -2;
+  width: calc(100% - 60px);
+  background-color: #f3f3f3;
+}
+
+@media (max-width:767px) {
+
+  .team-members .container .box::before {
+
+    width: 100%;
+  }
+}
+
+.team-members .container .box::after {
+  z-index: -1;
+  width: 0px;
+  background-color: #e4e4e4;
+  transition: var(--transition-time);
+}
+
+.team-members .container .box:hover::after {
+
+  width: calc(100% - 60px);
+}
+
+@media (max-width:767px) {
+
+  .team-members .container .box:hover::after {
+
+    width: 100%;
+  }
+}
+
+.team-members .container .box .data {
+  display: flex;
+  align-items: center;
+}
+
+.team-members .container .box .data img {
+  max-width: calc(100% - 60px);
+  transition: var(--transition-time);
+  border-radius: 10px;
+}
+
+.team-members .container .box:hover .data img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.team-members .container .box .data .social-links {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-members .container .box .data .social-links li a {
+  display: block;
+  padding: 20px 0;
+}
+
+.team-members .container .box .data .social-links li a i {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: var(--transition-time);
+
+}
+
+.team-members .container .box .data .social-links li a:hover i {
+
+  color: var(--main-color);
+}
+
+.team-members .container .box .text {
+  padding-left: 80px;
+  margin-top: 20px;
+}
+
+@media (max-width:767px) {
+
+  .team-members .container .box .text {
+
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.team-members .container .box .text h3 {
+  color: var(--main-color);
+  font-size: 1.4rem;
+}
+
+.team-members .container .box:hover .text h3 {
+
+  color: var(--text-color);
+}
+
+.team-members .container .box .text p {
+  margin: 10px 0 20px;
+}
+
+/* End Team Members */
+
 /* Start Animation */
 
 @-webkit-keyframes up-and-down {
