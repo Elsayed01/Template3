@@ -79,6 +79,7 @@ ul {
 
 .main-title::before,
 .main-title::after {
+  content: "";
   position: absolute;
   background-color: var(--main-color);
   width: 12px;
@@ -90,7 +91,6 @@ ul {
 }
 
 .main-title::before {
-  content: "";
   left: -30px;
 }
 
@@ -100,7 +100,6 @@ ul {
 }
 
 .main-title::after {
-  content: "";
   right: -30px;
 }
 
@@ -1085,6 +1084,72 @@ ul {
 }
 
 /* End Services */
+
+/* Start Skills */
+
+.our-skills {
+
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.our-skills .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+}
+
+.our-skills .container img {
+  max-width: 100%;
+}
+
+@media (max-width:991px) {
+
+  .our-skills .container img {
+
+    display: none;
+  }
+}
+
+.our-skills .container .skills-prog {
+  flex: 1;
+}
+
+.our-skills .container .skills-prog .skill-prog:not(:nth-last-of-type(1)) {
+  margin-bottom: 30px;
+}
+
+.our-skills .container .skills-prog .skill-prog h3 {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.our-skills .container .skills-prog .skill-prog h3 span {
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 5px;
+  color: var(--main-color);
+}
+
+.our-skills .container .skills-prog .skill-prog .prog {
+  height: 30px;
+  background-color: #eee;
+  margin-top: 10px;
+}
+
+.our-skills .container .skills-prog .skill-prog .prog span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+/* End Skills */
 
 
 /* Start Animation */
