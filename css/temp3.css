@@ -1151,6 +1151,123 @@ ul {
 
 /* End Skills */
 
+/* Start How it works */
+
+.how-it-works {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  background-color: var(--section-background);
+}
+
+.how-it-works .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 60px;
+  column-gap: 60px;
+}
+
+@media (max-width:991px) {
+
+  .how-it-works .container {
+
+    flex-direction: column;
+    row-gap: 60px;
+  }
+}
+
+
+.how-it-works .container .section-image img {
+
+  max-width: 100%;
+}
+
+.how-it-works .container .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.how-it-works .container .info .box {
+  background-color: #f6f5f5;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width:991px) {
+
+  .how-it-works .container .info .box {
+
+    flex-direction: column;
+  }
+}
+
+.how-it-works .container .info .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  z-index: -1;
+  background-color: #ededed;
+  transition: var(--transition-time);
+
+}
+
+.how-it-works .container .info .box:hover::before {
+
+  width: 100%;
+  height: 100%;
+}
+
+.how-it-works .container .info .box img {
+  max-width: 100%;
+  width: 64px;
+  margin-right: 30px;
+}
+
+@media (max-width:991px) {
+
+  .how-it-works .container .info .box img {
+
+    margin: 0 auto 30px;
+  }
+}
+
+.how-it-works .container .info .box .text {
+  flex: 1;
+}
+
+@media (max-width:991px) {
+
+  .how-it-works .container .info .box .text {
+
+    text-align: center;
+  }
+}
+
+.how-it-works .container .info .box .text h3 {
+  font-size: 1.3rem;
+}
+
+.how-it-works .container .info .box .text p {
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* End How it works */
+
 
 /* Start Animation */
 
