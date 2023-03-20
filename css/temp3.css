@@ -1497,6 +1497,8 @@ ul {
 
 /* End Latest Events */
 
+/* Start Pricing */
+
 .pricing {
   position: relative;
   padding-top: var(--main-section-padding);
@@ -1655,6 +1657,94 @@ ul {
   border-color: var(--alt-color);
   color: white;
 }
+
+/* End Pricing */
+
+/* Start Videos */
+
+.videos {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.videos .container .holder {
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width:991px) {
+
+  .videos .container .holder {
+
+    flex-direction: column;
+  }
+}
+
+.videos .container .holder .time-stamps {
+  min-width: 300px;
+  background-color: white;
+}
+
+.videos .container .holder .time-stamps .top-videos {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.videos .container .holder .time-stamps ul {
+  background-color: white;
+}
+
+.videos .container .holder .time-stamps ul li {
+  padding: 20px;
+  border-top: 1px solid var(--section-background);
+  cursor: pointer;
+  transition: var(--transition-time);
+
+}
+
+.videos .container .holder .time-stamps ul li:hover {
+
+  background-color: #fafafa;
+  color: var(--main-color);
+}
+
+.videos .container .holder .time-stamps ul li span {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-color);
+  transition: var(--transition-time);
+
+}
+
+.videos .container .holder .time-stamps ul li:hover span {
+
+  color: black;
+}
+
+.videos .container .holder .preview {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.videos .container .holder .preview img {
+  max-width: 100%;
+}
+
+.videos .container .holder .preview .info {
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+/* End Videos */
 
 /* Start Animation */
 
