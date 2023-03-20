@@ -1268,6 +1268,235 @@ ul {
 
 /* End How it works */
 
+/* Start Latest Events */
+
+.events {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.events .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.events .container img {
+
+  max-width: 450px;
+}
+
+@media (max-width:991px) {
+
+  .events .container img {
+
+    margin: 0 auto 20px;
+  }
+
+}
+
+@media (max-width:767px) {
+
+  .events .container img {
+
+    display: none;
+  }
+
+}
+
+.events .container .info {
+  flex: 1;
+}
+
+.events .container .info>.time {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+.events .container .info>.time .unit {
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  width: 75px;
+  transition: var(--transition-time);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events .container .info>.time .unit:hover {
+
+  border-color: var(--main-color);
+}
+
+.events .container .info>.time .unit span {
+
+  display: block;
+  transition: var(--main-color);
+}
+
+
+.events .container .info>.time .unit span:first-child {
+  font-size: 2.2rem;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 15px;
+}
+
+.events .container .info>.time .unit span:nth-last-of-type(1) {
+  border-top: 1px solid #d4d4d4;
+  width: 100%;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+}
+
+.events .container .info>.time .unit:hover span:nth-last-of-type(1) {
+
+  border-top-color: var(--main-color);
+}
+
+
+.events .container .info>h2 {
+  text-align: center;
+  margin: 40px auto 20px;
+  font-size: 1.9rem;
+}
+
+.events .container .info>p {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.events .container .subscribe {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.events .container .subscribe form {
+  background-color: #f6f5f5;
+  width: 600px;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+@media (max-width:767px) {
+
+  .events .container .subscribe form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+}
+
+.events .container .subscribe form input[type="email"] {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  caret-color: var(--main-color);
+  transition: var(--transition-time);
+}
+
+@media (max-width:767px) {
+
+  .events .container .subscribe form input[type="email"] {
+    padding: 15px;
+    border-radius: 0;
+  }
+
+}
+
+.events .container .subscribe form input[type="email"]:focus {
+
+  outline: transparent;
+}
+
+.events .container .subscribe form input[type="email"]::-webkit-input-placeholder {
+  -webkit-transition: var(--transition-time);
+  transition: var(--transition-time);
+}
+
+.events .container .subscribe form input[type="email"]::-moz-placeholder {
+  -moz-transition: var(--transition-time);
+  transition: var(--transition-time);
+}
+
+.events .container .subscribe form input[type="email"]:-ms-input-placeholder {
+  -ms-transition: var(--transition-time);
+  transition: var(--transition-time);
+}
+
+.events .container .subscribe form input[type="email"]::-ms-input-placeholder {
+  -ms-transition: var(--transition-time);
+  transition: var(--transition-time);
+}
+
+.events .container .subscribe form input[type="email"]::placeholder {
+  transition: var(--transition-time);
+
+}
+
+.events .container .subscribe form input[type="email"]:focus::-webkit-input-placeholder {
+
+  opacity: 0;
+}
+
+.events .container .subscribe form input[type="email"]:focus::-moz-placeholder {
+
+  opacity: 0;
+}
+
+.events .container .subscribe form input[type="email"]:focus:-ms-input-placeholder {
+
+  opacity: 0;
+}
+
+.events .container .subscribe form input[type="email"]:focus::-ms-input-placeholder {
+
+  opacity: 0;
+}
+
+.events .container .subscribe form input[type="email"]:focus::placeholder {
+
+  opacity: 0;
+}
+
+.events .container .subscribe form input[type="submit"] {
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  transition: var(--transition-time);
+
+}
+
+@media (max-width:767px) {
+
+  .events .container .subscribe form input[type="submit"] {
+    padding: 15px;
+    border-radius: 0;
+  }
+
+}
+
+.events .container .subscribe form input[type="submit"]:hover {
+
+  background-color: var(--alt-color);
+}
+
+/* End Latest Events */
+
 
 /* Start Animation */
 
