@@ -1497,6 +1497,164 @@ ul {
 
 /* End Latest Events */
 
+.pricing {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  background-color: var(--section-background);
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing .container .plan {
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing .container .plan::after,
+.pricing .container .plan::before {
+  content: "";
+  position: absolute;
+  background-color: #f6f6f6;
+  height: 50%;
+  width: 0;
+  transition: var(--transition-time);
+  z-index: -1;
+}
+
+.pricing .container .plan::before {
+  top: 0;
+  left: 0;
+}
+
+.pricing .container .plan::after {
+  right: 0;
+  bottom: 0;
+}
+
+.pricing .container .plan:hover::after,
+.pricing .container .plan:hover::before {
+
+  width: 100%;
+}
+
+@media (min-width:1200px) {
+
+  .pricing .container .plan.popular {
+
+    top: -20px;
+  }
+
+}
+
+
+.pricing .container .plan.popular .mark {
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-size: 1.15rem;
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px 10px 35px 10px;
+  width: 40px;
+}
+
+.pricing .container .plan.popular .mark::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 20px;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  bottom: 0;
+  left: 0;
+}
+
+.pricing .container .plan .title {
+  font-size: 1.55rem;
+  font-weight: bold;
+  margin: 30px 0;
+  letter-spacing: -1px;
+}
+
+.pricing .container .plan img {
+  width: 80px;
+  margin-bottom: 40px;
+}
+
+.pricing .container .plan .price {
+  margin-bottom: 20px;
+}
+
+.pricing .container .plan .price span {
+  display: block;
+}
+
+.pricing .container .plan .price .number {
+  font-size: 3.75rem;
+  color: var(--main-color);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pricing .container .plan .price span:last-of-type {
+  color: var(--text-color);
+}
+
+.pricing .container .plan>ul {
+  text-align: left;
+}
+
+.pricing .container .plan>ul li {
+  border-top: 1px solid #eee;
+  padding: 20px 20px 20px 35px;
+  position: relative;
+}
+
+.pricing .container .plan>ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  position: absolute;
+  left: 0;
+  margin-right: 10px;
+  padding-left: 15px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+.pricing .container .plan>a {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto 40px;
+  padding: 15px 20px;
+  font-weight: bold;
+  transition: var(--transition-time);
+
+}
+
+.pricing .container .plan>a:hover {
+
+  background-color: var(--alt-color);
+  border-color: var(--alt-color);
+  color: white;
+}
 
 /* Start Animation */
 
