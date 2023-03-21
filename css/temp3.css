@@ -1746,6 +1746,113 @@ ul {
 
 /* End Videos */
 
+
+/* Start Stats */
+
+.stats {
+  position: relative;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  background-image: url("../images/stats.jpg");
+  background-size: cover;
+  min-height: 300px;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 95%);
+}
+
+.stats h2 {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 auto 50px;
+}
+
+@media (max-width:767px) {
+
+  .stats h2 {
+
+    font-size: 2rem;
+  }
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.stats .container .card {
+  position: relative;
+  background-color: white;
+  padding: 30px 15px;
+  text-align: center;
+  opacity: 0.8;
+  transition: var(--transition-time);
+}
+
+.stats .container .card::before,
+.stats .container .card::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 2px;
+  height: 0;
+  transition: 1s;
+
+}
+
+.stats .container .card::before {
+  top: 0;
+  right: 0;
+}
+
+.stats .container .card::after {
+
+  left: 0;
+  bottom: 0;
+}
+
+.stats .container .card:hover {
+
+  opacity: 1;
+}
+
+.stats .container .card:hover::after,
+.stats .container .card:hover::before {
+
+  height: 100%;
+}
+
+.stats .container .card:nth-child(2) i,
+.stats .container .card:nth-child(3) i {
+  font-weight: 600;
+}
+
+
+.stats .container .card .number {
+  font-size: 3.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stats .container .card .text {
+  color: var(--main-color);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+/* End Stats */
+
 /* Start Animation */
 
 @-webkit-keyframes up-and-down {
