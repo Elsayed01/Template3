@@ -1853,6 +1853,129 @@ ul {
 
 /* End Stats */
 
+/* Start Discount */
+
+.discount {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discount .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+@media (max-width:991px) {
+
+  .discount .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width:992px) {
+
+  .discount .section {
+    flex-basis: 50%;
+  }
+}
+
+.discount .section .content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.discount .section .content h2 {
+  font-size: 2.5rem;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.discount .section.image {
+  background-image: url(../images/discount-background1.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  -webkit-animation: change-background 10s infinite linear;
+  animation: change-background 10s infinite linear;
+}
+
+.discount .section.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(23 135 224 / 97%);
+}
+
+.discount .section.image h2 {
+  color: white;
+}
+
+.discount .section.image p {
+  max-width: 500px;
+  font-size: 1.13rem;
+  line-height: 1.6;
+  color: white;
+  margin: 0 0 20px;
+}
+
+.discount .section.image img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.discount .section.form .field {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  caret-color: var(--main-color);
+  transition: var(--transition-time);
+
+}
+
+.discount .section.form .field:focus {
+
+  outline: none;
+}
+
+.discount .section.form textarea {
+  resize: none;
+  height: 200px;
+}
+
+.discount .section.form input[type="submit"] {
+  display: block;
+  width: 100%;
+  color: white;
+  background-color: var(--main-color);
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: var(--transition-time);
+
+}
+
+.discount .section.form input[type="submit"]:hover {
+
+  background-color: var(--alt-color);
+}
+
+/* End Discount */
+
 /* Start Animation */
 
 @-webkit-keyframes up-and-down {
@@ -2015,6 +2138,32 @@ ul {
     opacity: 0;
     width: 200%;
     height: 200%;
+  }
+}
+
+@-webkit-keyframes change-background {
+
+  0%, 100% {
+
+    background-image: url("../images/discount-background1.jpg");
+  }
+
+  50% {
+
+    background-image: url("../images/discount-background2.jpg");
+  }
+}
+
+@keyframes change-background {
+
+  0%, 100% {
+
+    background-image: url("../images/discount-background1.jpg");
+  }
+
+  50% {
+
+    background-image: url("../images/discount-background2.jpg");
   }
 }
 
