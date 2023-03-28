@@ -1976,6 +1976,199 @@ ul {
 
 /* End Discount */
 
+/* Start Footer */
+
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+
+.footer p,
+.footer span,
+.footer a {
+
+  color: #b9b9b9;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+
+.footer .container .col.head h3 {
+  font-size: 3.1rem;
+  color: white;
+  margin: 0 0 20px;
+}
+
+@media (max-width:767px) {
+
+  .footer .container .col.head {
+
+    text-align: center;
+  }
+}
+
+.footer .container .col.head ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width:768px) {
+
+  .footer .container .col.head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:767px) {
+
+  .footer .container .col.head ul {
+
+    justify-content: center;
+  }
+}
+
+.footer .container .col.head ul li a {
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+  transition: var(--transition-time);
+
+}
+
+.footer .container .col.head ul li:first-of-type:hover a {
+
+  background-color: #1877f2;
+}
+
+.footer .container .col.head ul li:nth-last-of-type(2):hover a {
+
+  background-color: #1da1f2;
+
+}
+
+.footer .container .col.head ul li:last-of-type:hover a {
+
+  background-color: #ff0000;
+
+}
+
+.footer .container .col.head p {
+  line-height: 2;
+  text-align: left;
+}
+
+@media (max-width:767px) {
+
+  .footer .container .col.head p {
+
+    text-align: center;
+  }
+}
+
+
+.footer .container .col.links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .container .col.links ul li {
+  position: relative;
+  padding: 15px 0;
+  transition: var(--transition-time);
+}
+
+.footer .container .col.links ul li:not(:nth-last-child(1)) {
+
+  border-bottom: 1px solid #444;
+}
+
+.footer .container .col.links ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.footer .container .col.links ul li:hover {
+
+  padding-left: 10px;
+}
+
+.footer .container .col.links ul li a {
+  transition: var(--transition-time);
+
+}
+
+.footer .container .col.links ul li:hover a {
+
+  color: white;
+}
+
+
+.footer .container .col.lines .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+@media (max-width:767px) {
+
+  .footer .container .col.lines .row {
+
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer .container .col.lines .row i {
+  font-size: 1.55rem;
+  color: var(--main-color);
+}
+
+.footer .container .col.lines .row .info {
+  line-height: 1.7;
+  flex: 1;
+  color: #b9b9b9;
+}
+
+.footer .container .col.lines .row.phone span {
+  display: block;
+}
+
+
+.footer .container .col.gallery-images img {
+  width: 78px;
+  max-width: 100%;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+.footer>p {
+  color: white;
+  margin-top: 50px;
+  padding: 25px 0;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+/* End Footer */
+
 /* Start Animation */
 
 @-webkit-keyframes up-and-down {
