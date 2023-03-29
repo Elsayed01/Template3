@@ -108,6 +108,19 @@ ul {
   animation: move-left 0.5s linear forwards;
 }
 
+.shape::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(235deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+
 /* End Components */
 
 
@@ -2051,18 +2064,19 @@ ul {
 .footer .container .col.head ul li:first-of-type:hover a {
 
   background-color: #1877f2;
+  color: white;
 }
 
 .footer .container .col.head ul li:nth-last-of-type(2):hover a {
 
   background-color: #1da1f2;
-
+  color: white;
 }
 
 .footer .container .col.head ul li:last-of-type:hover a {
 
   background-color: #ff0000;
-
+  color: white;
 }
 
 .footer .container .col.head p {
