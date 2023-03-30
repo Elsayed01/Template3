@@ -1180,6 +1180,9 @@ ul {
   display: block;
   height: 100%;
   background-color: var(--main-color);
+  width: 0%;
+  transition: var(--transition-time);
+
 }
 
 /* End Skills */
