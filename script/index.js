@@ -30,7 +30,7 @@ function countdown() {
   let minutesSpan = document.querySelector(".events .minutes");
   let secondsSpan = document.querySelector(".events .seconds");
 
-  let eventDate = new Date("April 21, 2023 23:59:59").getTime();
+  let eventDate = new Date("April 21, 2024 23:59:59").getTime();
 
   let counter = setInterval(() => {
     let dateNow = new Date().getTime();
